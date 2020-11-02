@@ -32,6 +32,7 @@ module Homebrew
 
     version = args.version || detect_version(path)
     name = args.name || detect_name(path, version)
+    name = name.downcase
 
     prefix = HOMEBREW_CELLAR/name/version
 
